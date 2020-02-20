@@ -422,9 +422,10 @@ as a standalone service, or httpd for being run by a httpd server")
       }
     }
 
-    oslo::middleware {'nova_config':
-      enable_proxy_headers_parsing => $enable_proxy_headers_parsing,
-    }
+    # This is fixed in train
+    #oslo::middleware {'nova_config':
+    #  enable_proxy_headers_parsing => $enable_proxy_headers_parsing,
+    #}
   }
 
   nova_config {
